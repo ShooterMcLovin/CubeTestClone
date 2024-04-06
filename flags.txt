@@ -1,0 +1,22 @@
+-framework Cocoa -framework OpenGL -framework IOKit
+gcc main.c ... libmlx42.a -Iinclude -lglfw
+gcc main.c ... libmlx42.a -Iinclude -lglfw -L"/Users/$(USER)/.brew/opt/glfw/lib/"
+
+
+
+brew install glfw
+brew install cmake
+
+git clone https://github.com/codam-coding-college/MLX42.git
+cd MLX42
+cmake -B "build" # build here refers to the outputfolder.
+cd "build" && make -C . -j4
+
+
+# Homebrew
+gcc main.c ... libmlx42.a -Iinclude -lglfw -L"/opt/homebrew/Cellar/glfw/3.3.8/lib/"
+
+# 42Homebrew
+gcc main.c ... libmlx42.a -Iinclude -lglfw -L"/Users/$(USER)/.brew/opt/glfw/lib/"
+
+ lib/MLX42/libmlx42.a -I -Iinclude -lglfw -L"/Users/$(USER)/.brew/opt/glfw/lib/"
